@@ -128,5 +128,39 @@ mission "Dangerous Games 1B"
 			`Karengo shrugs and doesn't take it back.`
 
 			label cont
-			`	"Maybe I'll see you again, yeah? I'm in need of a pilot with some guts." He walks off in the general direction of the spaceport bar.`
+			`	"Maybe I'll see you again sometime, yeah? I'm in need of a pilot with some guts." He walks off in the general direction of the spaceport bar.`
 
+mission "Dangerous Games 1C"
+	landing
+	to offer
+		has "Dangerous Games 1B: done"
+	on offer
+		event "dangerous games - established" 30
+
+mission "Dangerous Games 2A"
+	name "Into the Deep"
+	description "Fly Karengo and his lads to <destination> in order to see some ocean creatures called 'Choijuu'."
+	source Skymoot
+	destination Bloodsea
+	passengers 10
+	cargo 10
+	to offer
+		has "event: dangerous games - established"
+	on offer
+		conversation
+			`	"<first>!" A huge hand claps you on the shoulder and spins you around, where you find yourself facing a large, widly grinning man. "Remember me? You're the best pilot I've had - that stunt to get us out of Skymoot, right out of the dragon's nest? Epic." A crude, but professional, sign behind him reads, 'Dangerous Games - Karengo's Galactic Adventures'.`
+			`	"Like it?" Karengo follows your gaze. "Decided to make this an official thing. Well...an unofficial official thing. Feds wouldn't understand. Doesn't matter; I need a pilot again, and a good one. Yer ship's waterproof, right?"`
+			choice
+				`"Uh, yeah. I think so."`
+				`"Of course."`
+					goto cont
+				`"Sorry, mate. You'll have to find another pilot."`
+				decline
+
+			label cont
+			`	Karengo laughs. "It handles the vacuum of space, yeah? You're right, it'll be fine. I've got a group of lads here rarin' to see some Choijuu in heat, right up close'n'personal. They've all got their own subpods, so how's about we load up and head out in the next few hours. Good? Good."`
+			`	 "Oh, nearly forgot. We're headed to Bloodsea, in Antares. Ain't sure who's in charge over there these days, so we might need to grease some palms."`
+			accept
+
+	on complete
+		conversation
