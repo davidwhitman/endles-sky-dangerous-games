@@ -1,6 +1,6 @@
 # Dangerous Games missions
 
-##Contents
+##Missions
 1. The Dragonriders [Complete]
 2. Into The Depths [WIP]
 
