@@ -139,16 +139,16 @@ mission "Dangerous Games 1C"
 
 mission "Dangerous Games 2A"
 	name "Into the Deep"
-	description "Fly Karengo and his lads to <destination> in order to see some ocean creatures called 'Choijuu'."
+	description "Fly Karengo and his lads to <destination> in order to see some ocean creatures called 'Quoijuu'."
 	source Skymoot
-	destination Bloodsea
+	destination "Deadman's Cove"
 	passengers 10
 	cargo 10
 	to offer
 		has "event: dangerous games - established"
 	on offer
 		conversation
-			`	"<first>!" A huge hand claps you on the shoulder and spins you around, where you find yourself facing a large, widly grinning man. "Remember me? You're the best pilot I've had - that stunt to get us out of Skymoot, right out of the dragon's nest? Epic." A crude, but professional, sign behind him reads, 'Dangerous Games - Karengo's Galactic Adventures'.`
+			`	"<first>!" A huge hand claps you on the shoulder and spins you around, where you find yourself facing a large, widly grinning man. "Remember me? Yer the best pilot I've had - that stunt to get us out of Skymoot, right out of the dragon's nest? Epic." A crude, but professional, sign behind him reads, 'Dangerous Games - Karengo's Galactic Adventures'.`
 			`	"Like it?" Karengo follows your gaze. "Decided to make this an official thing. Well...an unofficial official thing. Feds wouldn't understand. Doesn't matter; I need a pilot again, and a good one. Yer ship's waterproof, right?"`
 			choice
 				`"Uh, yeah. I think so."`
@@ -158,9 +158,22 @@ mission "Dangerous Games 2A"
 				decline
 
 			label cont
-			`	Karengo laughs. "It handles the vacuum of space, yeah? You're right, it'll be fine. I've got a group of lads here rarin' to see some Choijuu in heat, right up close'n'personal. They've all got their own subpods, so how's about we load up and head out in the next few hours. Good? Good."`
-			`	 "Oh, nearly forgot. We're headed to Bloodsea, in Antares. Ain't sure who's in charge over there these days, so we might need to grease some palms."`
+			`	Karengo laughs. "It handles the vacuum of space, yeah? Yer right, it'll be fine. I've got a group of lads and ladies here rarin' to see some quoijuu in heat, right up close'n'personal. They've all got their own subpods, so how's about we load up and head out in the next few hours. Good? Good."`
+			`	 "Oh, nearly forgot. We're headed to Deadman's Cove, in Almach. Ain't sure who's in charge over there these days, so we might need to grease some palms. Best to keep your eyes open and shields up."`
 			accept
 
 	on complete
 		conversation
+			`	As before, on Skymoot, Karengo guides you down to a landing spot far away from the local government. "Don't want no interruptions," he says. Despite days of pressuring, you've been unable to get Karengo to tell you exactly what a quoijuu is, other than the slightly ominous, "the biggest fish".`
+			`	He passes you a crudely drawn map and gives you an uncharacteristically serious expression. "Study this. My source tells me navigation down there is a bitch and you'll have enough on your radar between the scyllae, the taniwhales, the morgawrii, the quoijuu, and the hydrothermal vents. We're all for adventure, but let's get everybody back in one piece this time, yeah? Keep to the clear paths and we'll back right quick."`
+			// show map image
+			choice
+				`"Ok, got it."`
+			`	The adventure seekers, who you've spent the trip getting to know, are putting on wetsuits and double-checking their subpods. Daciana catches your gaze and grins. "Bafta, mate. Safe sailing, see you on the other side." Karengo gives you a signal and you hurry back to the cockpit to fly out, away from safe shoals and over the watery abyss.`
+			`	At your touch, the <ship> slowly sinks below the waves. As Karengo warned you about on the way over, most of your navigation systems quickly flash red warnings and go offline; there is some unknown interferences that overwhelms the poor sensors designed for space first and water second, or fifth, or not at all. Minutes tick by as the crew silently watches one of the few sensors still working. A young couple, Balazs and Jorma, uneasily exchange glances.`
+			`	EIGHT KILOMETERS, the depth meter reads. TEN KILOMETERS. SIXTEEN KILOMETERS. A loud, metallic creak echoes through the ship and Mussie jumps, startled. Karengo claps him on the back and gives him a signature grin. "Maybe <first> can keep you aboard after this in case he needs anything from a high shelf!" Mussie smiles weakly, but his eyes don't leave the readout.`
+			`	TWENTY-FIVE KILOMETERS. "This's it," Karengo announces, "Sub up! Let's see what there is to see." The <ship> smoothly descends into the mouth of a massive cave and your visibility, clouded by dark sulfide emissions from the hydrothermal vents at the floor, drops to less than eight meters. A fan of 10 personal subpods fan out behind you, their communication equipment syncing with yours to display them as blips on your screen. "Ok <first>," Karengo crackles over the radio. "Lead on."`
+			choice
+				`(move left)`
+				`(move forward)`
+				`(move right)`
