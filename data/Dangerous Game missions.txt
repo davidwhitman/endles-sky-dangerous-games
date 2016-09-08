@@ -206,7 +206,7 @@ mission "Dangerous Games 2A - Choice 1 Failed"
 	on offer
 		conversation
 		`	A quick roll call shows two subpods missing; Elias and Taddese never made it back.`
-		`	A voice crackles over the radio, "It's clear up this way!" It sounds like
+		`	A voice crackles over the radio, "It's clear up this way!" Somebody, no doubt unimpressed by your navigating, has scouted ahead and found a way though. 
 
 // daciana
 // mussie
@@ -214,3 +214,13 @@ mission "Dangerous Games 2A - Choice 1 Failed"
 // jorma
 // Elias
 // Taddese
+
+No other path may you take
+Oiled skin flash and flicker
+Razer spikes from the deep
+Thrown against unyielding stone
+Heed me, and live.
+
+I go north and I go east
+I turn to my right and onwards fly
+
