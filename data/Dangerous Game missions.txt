@@ -184,7 +184,7 @@ mission "Dangerous Games 2A"
 			`	Oiled skins flash and flicker`
 			`	Razer spikes grow from the deep`
 			`	Titanic walls crush and smash`
-			`	Heed my beginnings to live.`
+			`	Heed the beginnings to live.`
 
 			choice
 				`(move east)`
@@ -196,27 +196,48 @@ mission "Dangerous Games 2A"
 				`(move west)`
 				goto west-bad-wall
 
+
 				label east-bad-morgawrii
-				`	Small schools of fish flip past as you guide your small fleet to the east. Out of the darkness, some sort of small whale crashes into your ship, setting off a couple of proximity alarms but causing no damage. It isn't until you hear screaming, distorted by the speakers, that it becomes clear what you just saw; the "small whale" was a just a flipper of something much, much larger.`
+				`	Small schools of fish flit past as you guide your small fleet to the east. Out of the darkness, some sort of small whale crashes into your ship, setting off a couple of proximity alarms but causing no damage. It isn't until you hear screaming, distorted by the speakers, that it becomes clear what you just saw; the "small whale" was a just a flipper of something much, much larger.`
 				`	"Morgawrii!" shouts Karengo, "Turn around! Turn around!" `
 				choice
 					`(go back)`
 				`	Hauling on the controls, you spin your ship around. Leviathan shapes rise from below, stirring the water around your ship as it speeds to safety.`
-				event dangerous-games-msn-2-choice-1-fail
-				goto end
+				goto end-fail
+
+
+				label north-success
+				`	Small schools of fish flit past as you guide your small fleet to the north. Minutes pass with no sign of danger, and finally Karengo broadcasts, "Good work, <first>. Looks like this is the way forward."` 
+				`	"Last one there's a rotton fish eye!" shouts Elias, and your screen shows his subpod leap forward and gain on you, followed quickly by others'.`
+				`	"Woah!" says Karengo, over the radio. "I think that's far enough. Which way to we go next, <first>?"`
+				goto end-succeed
+
 
 				label south-bad-vents
-				`	Small schools of fish flip past as you guide your small fleet to the south. The swirling clouds of emissions seem to get thicker and thicker, until there's no reason to look at anything but the ship compass. The screen beeps once and a blip disappears.`
+				`	Small schools of fish flit past as you guide your small fleet to the south. The swirling clouds of emissions seem to get thicker and thicker, until there's no reason to look at anything but the ship compass. The screen beeps once and a blip disappears.`
 				`	"Elias?" Karengo asks. "Your transmitter just cut out."`
-				`	When there's no response, he swears. "Everybody go back!" he broadcasts. "Something's wrong!"
+				`	When there's no response, he swears. "Everybody go back." he broadcasts. "Something's wrong."
 				choice
 					`(go back)`
-				`	You spin your ship around and hear a loud crunch come from outside - your shields have just impacted something large and solid. The outer lights shine off falling stone and it suddenly it all comes together; you led everybody through a field of hydrothermal vents that rise for tens of meters off the bottom, obscured by their own dark clouds.`
+				`	You spin your ship around and hear a loud crunch come from outside - your shields have just impacted something large and solid. The outer lights shine off falling stone and it suddenly it all comes together; you've led everybody through a field of hydrothermal vents that rise for tens of meters off the bottom, obscured by their own noxious clouds.`
 				`	You guide your ship back to safety, toppling a couple more underwater smokestacks as you go.`
-				event dangerous-games-msn-2-choice-1-fail
-				goto end
+				goto end-fail
 
-				label end
+
+				label west-bad-wall
+				`	Small schools of fish flit past as you guide your small fleet to the west. Minutes pass with no sign of danger, and finally Karengo broadcasts, "Good work, <first>. Looks like this is the way forward."` 
+				`	"Last one there's a rotton fish eye!" shouts Elias, and your screen shows his subpod leap forward and gain on you, followed quickly by others'.`
+				`	Then, without warning, a proximity sensor goes off at the same time your outer lights show a wall directly in front, stretching for as far as you can see.`
+				`	"Stop!" shouts Karengo, "It's the end of the cavern! Stop and go back!"`
+				choice
+					`(go back)`
+				`	Shuttering, your ship comes to a halt mere meters from the endless stone face. With a sinking feeling that has nothing to do with the depth, you turn the ship around and head back the way you came.`
+				goto end-fail   
+
+				label end-fail
+				event dangerous-games-msn-2-choice-1-fail
+				
+				label end-succeed
 
 
 mission "Dangerous Games 2A - Choice 1 Failed"
@@ -241,7 +262,7 @@ No other path may you take
 Oiled skins flash and flicker
 Razer spikes grow from the deep
 Titanic walls crush and smash
-Heed my beginnings to live.
+Heed the beginnings to live.
 
 To the north and to the east
 Track my movements like a beast.
